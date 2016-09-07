@@ -5,7 +5,7 @@ public class TicTacToeKeywords {
     
     
 	public void startNewGame() {
-        mode = new TicTacToe();
+        model = new TicTacToe();
 	}
 	
 	public void markLocation(int row, int col) {
