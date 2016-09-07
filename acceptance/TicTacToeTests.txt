@@ -1,5 +1,5 @@
 *** Settings ***
-Library           TicTacToeKeywords
+Library           keywords.TicTacToeKeywords
 
 
 *** Keywords ***

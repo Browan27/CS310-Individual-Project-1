@@ -8,13 +8,10 @@ public class TicTacToeKeywords {
     
     public void startNewGame() {
         model = new TicTacToeModel();
-        turn = true;
     }
     
     public void markLocation(int r, int c) {
-        String m = (turn)? "X" : "O";
-        model.makeMark(m, r, c);
-        turn = !turn;
+        model.makeMark(r, c);
     }
     
     public String getMark(int r, int c) {
@@ -22,7 +19,7 @@ public class TicTacToeKeywords {
     }
     
     public String getWinner() {
-        return "X";
+        return model.getWinner();
     }
 }
 
