@@ -1,6 +1,4 @@
-call gradle clean build jacocoTestReport
-explorer "file:///%~dp0build/reports/tests/index.html"
+call gradle clean build jacocoTestReport runrobot
+explorer "file:///%~dp0build/reports/tests/test/index.html"
 explorer "file:///%~dp0build/reports/jacoco/test/html/index.html"
-echo "Running acceptance tests..."
-call runacceptance.bat
-explorer "file:///%~dp0acceptance/report.html"
+explorer "file:///%~dp0build/robot-results/report.html"

@@ -9,7 +9,6 @@ plugins {
 apply plugin: 'java'
 apply plugin: 'jacoco'
 
-sourceCompatibility = 1.7
 version = '1.0'
 jar {
     manifest {
@@ -24,7 +23,7 @@ repositories {
 }
 
 dependencies {
-    testCompile 'junit:junit:4.12'
+    testCompile 'junit:junit:4+'
 }
 
 jacocoTestReport {
@@ -33,4 +32,5 @@ jacocoTestReport {
     additionalSourceDirs = files(sourceSets.main.allJava.srcDirs)
 }
 
+runrobot.debugfile = 'debug.log'
 runrobot.dependsOn build
