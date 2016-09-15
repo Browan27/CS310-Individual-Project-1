@@ -59,6 +59,18 @@ public class TicTacToeTest {
 	}
     
     @Test
+	public void testGameIsWonByOAcrossBottomRow() {
+		model.makeMark(1, 1);
+        model.makeMark(2, 0);
+        model.makeMark(0, 0);
+        model.makeMark(2, 2);
+        model.makeMark(0, 2);
+        model.makeMark(2, 1);
+        assertTrue(model.gameOver());
+        assertEquals("O", model.getWinner());
+	}
+    
+    @Test
 	public void testGameIsWonByOVerticallyAcrossMiddleCollum() {
 		model.makeMark(0, 0);
         model.makeMark(0, 1);
